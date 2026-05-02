@@ -1,0 +1,11 @@
+{
+  "name": "businessplan-express",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check netlify/functions/businessplan-lead.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.105.1"
+  }
+}

@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Professioneller Businessplan und Finanzplan für Gründer, Förderungen und Banken. Persönlich erstellt, klar kalkuliert und sauber aufbereitet."
+    />
+    <title>Businessplan Express</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #1a1a1a;
+        --muted: #666666;
+        --line: #e7e7e7;
+        --soft: #f8f8f6;
+        --accent: #204e3d;
+        --accent-soft: #edf4f0;
+        --radius: 18px;
+        --max: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        overflow: hidden;
+      }
+
+      .container {
+        width: min(100% - 32px, var(--max));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        font-weight: 650;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--text);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        background: var(--accent);
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1;
+        cursor: pointer;
+        transition:
+          background 160ms ease,
+          border-color 160ms ease,
+          color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .button:hover {
+        background: #16392c;
+        border-color: #16392c;
+        transform: translateY(-1px);
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--text);
+        border-color: var(--line);
+      }
+
+      .button.secondary:hover {
+        background: var(--soft);
+        border-color: #d7d7d7;
+      }
+
+      .hero {
+        padding: 92px 0 72px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.62fr);
+        gap: 42px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 0 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-top: 26px;
+        font-size: clamp(44px, 6vw, 72px);
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+        font-weight: 680;
+      }
+
+      .lead {
+        max-width: 640px;
+        margin-top: 26px;
+        color: var(--muted);
+        font-size: clamp(18px, 2vw, 22px);
+        line-height: 1.5;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .trust {
+        margin-top: 22px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .hero-photo {
+        position: relative;
+        overflow: hidden;
+        min-height: 560px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--soft);
+      }
+
+      .hero-photo img {
+        width: 100%;
+        height: 100%;
+        min-height: 560px;
+        display: block;
+        object-fit: cover;
+        object-position: 42% center;
+      }
+
+      .hero-photo-caption {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.84);
+        backdrop-filter: blur(14px);
+      }
+
+      .mini-label {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .price {
+        margin-top: 4px;
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        font-weight: 680;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 0 10px;
+        border: 1px solid #d8e7df;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .metric-list {
+        display: grid;
+        gap: 0;
+        margin-top: 8px;
+      }
+
+      .metric {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 17px 0;
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .metric strong {
+        color: var(--text);
+        font-weight: 600;
+        text-align: right;
+      }
+
+      section {
+        padding: 82px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 48px;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        font-size: clamp(32px, 4vw, 56px);
+        line-height: 1.03;
+        letter-spacing: -0.055em;
+        font-weight: 660;
+      }
+
+      .section-copy {
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #ffffff;
+        padding: 24px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        letter-spacing: -0.025em;
+      }
+
+      .card p {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .check-list {
+        display: grid;
+        gap: 0;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+      }
+
+      .check-item {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .check-item:last-child {
+        border-bottom: 0;
+      }
+
+      .check {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        color: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 1;
+        margin-top: 2px;
+      }
+
+      .offer {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+        gap: 16px;
+        align-items: stretch;
+      }
+
+      .offer-panel {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 26px;
+        background: var(--soft);
+      }
+
+      .offer-price {
+        margin-top: 18px;
+        font-size: 46px;
+        letter-spacing: -0.06em;
+        line-height: 1;
+        font-weight: 680;
+      }
+
+      .old-price {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        text-decoration: line-through;
+        text-decoration-thickness: 1px;
+      }
+
+      .examples .card,
+      .testimonials .card {
+        min-height: 100%;
+      }
+
+      .meta {
+        display: inline-flex;
+        margin-bottom: 18px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .stars {
+        color: var(--accent);
+        letter-spacing: 0.04em;
+        font-size: 13px;
+      }
+
+      .faq-list {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+      }
+
+      details {
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+      }
+
+      details:last-child {
+        border-bottom: 0;
+      }
+
+      summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 22px 24px;
+        font-weight: 620;
+        letter-spacing: -0.02em;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details p {
+        max-width: 760px;
+        padding: 0 24px 24px;
+        color: var(--muted);
+      }
+
+      .form-section {
+        background: #fbfbfa;
+      }
+
+      .form-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
+        gap: 40px;
+        align-items: start;
+      }
+
+      .form-card {
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: #fff;
+        padding: 26px;
+      }
+
+      form {
+        display: grid;
+        gap: 16px;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 560;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid #dddddd;
+        border-radius: 12px;
+        background: #fff;
+        color: var(--text);
+        font: inherit;
+        font-size: 15px;
+        padding: 12px 14px;
+        outline: none;
+        transition:
+          border-color 140ms ease,
+          box-shadow 140ms ease;
+      }
+
+      textarea {
+        min-height: 132px;
+        resize: vertical;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(32, 78, 61, 0.08);
+      }
+
+      .fineprint,
+      .form-status {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .form-status {
+        min-height: 20px;
+      }
+
+      .advanced-fields {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .advanced-fields summary {
+        padding: 13px 14px;
+        background: var(--accent-soft);
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .advanced-fields-body {
+        display: grid;
+        gap: 16px;
+        padding: 0 14px 14px;
+      }
+
+      .footer {
+        padding: 34px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 18px;
+      }
+
+      @media (max-width: 760px) {
+        .hero-grid,
+        .section-head,
+        .offer,
+        .form-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 64px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .form-section {
+          padding: 20px 0;
+        }
+
+        .form-shell {
+          gap: 10px;
+        }
+
+        .form-intro .eyebrow,
+        .form-intro .lead {
+          display: none;
+        }
+
+        .form-intro h2 {
+          margin-top: 0 !important;
+          font-size: 30px;
+          letter-spacing: -0.045em;
+        }
+
+        .form-card {
+          padding: 12px;
+          border-radius: 20px;
+        }
+
+        form {
+          gap: 8px;
+        }
+
+        label {
+          gap: 4px;
+          font-size: 12px;
+        }
+
+        input,
+        select,
+        textarea {
+          min-height: 36px;
+          border-radius: 10px;
+          font-size: 14px;
+          padding: 7px 10px;
+        }
+
+        textarea {
+          min-height: 62px;
+        }
+
+        .fineprint {
+          font-size: 11px;
+          line-height: 1.3;
+        }
+
+        .form-card .button {
+          min-height: 38px;
+          width: 100%;
+        }
+
+        .form-status {
+          min-height: 0;
+          font-size: 12px;
+        }
+
+        .advanced-fields summary {
+          padding: 9px 10px;
+          font-size: 12px;
+        }
+
+        .advanced-fields-body {
+          gap: 8px;
+          padding: 0 10px 10px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(100% - 24px, var(--max));
+        }
+
+        .topbar-inner {
+          min-height: 64px;
+        }
+
+        .topbar .button {
+          display: none;
+        }
+
+        .hero,
+        section {
+          padding: 58px 0;
+        }
+
+        h1 {
+          font-size: clamp(42px, 13vw, 58px);
+        }
+
+        .field-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-photo {
+          border-radius: 22px;
+        }
+
+        .hero-photo,
+        .hero-photo img {
+          min-height: 440px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="container topbar-inner">
+          <a class="brand" href="#top" aria-label="Businessplan Express Start">
+            <span class="brand-mark">BE</span>
+            <span>Businessplan Express</span>
+          </a>
+          <a class="button secondary" href="#anfrage">Jetzt anfragen</a>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="container hero-grid">
+            <div>
+              <span class="eyebrow">Businessplan + Finanzplan für Gründer</span>
+              <h1>Dein professioneller Businessplan in 48 Stunden</h1>
+              <p class="lead">
+                Persönlich ausgearbeitet, bankfertig und individuell für deine
+                Geschäftsidee. Ohne Vorlagenchaos, ohne monatelange Abstimmung.
+              </p>
+              <div class="hero-actions">
+                <a class="button" href="#anfrage">Jetzt Businessplan anfragen</a>
+                <a class="button secondary" href="#ablauf">Ablauf ansehen</a>
+              </div>
+              <p class="trust">5 Sterne · Bereits 50+ Gründern geholfen</p>
+            </div>
+
+            <aside class="hero-photo" aria-label="Tarik Tosunoglu">
+              <img
+                src="assets/tarik-hero.png"
+                alt="Tarik Tosunoglu"
+                width="1024"
+                height="682"
+                fetchpriority="high"
+              />
+              <div class="hero-photo-caption">
+                <div>
+                  <p class="mini-label">Direkter Kontakt</p>
+                  <p><strong>Tarik Tosunoglu</strong></p>
+                </div>
+                <span class="badge">Antwort in 24h</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="testimonials">
+          <div class="container">
+            <div class="section-head">
+              <h2>Feedback von Gründern.</h2>
+              <p class="section-copy">
+                Saubere Unterlagen helfen dabei, schneller ins Gespräch mit
+                Banken, Förderstellen und Partnern zu kommen.
+              </p>
+            </div>
+
+            <div class="grid-3">
+              <article class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                  "Innerhalb kurzer Zeit hatte ich einen professionellen Plan,
+                  mit dem ich endlich konkret weiterarbeiten konnte."
+                </p>
+                <p><strong>Sarah M.</strong><br />Gründerin</p>
+              </article>
+              <article class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                  "Der Aufbau war verständlich, die Zahlen waren sauber und die
+                  Kommunikation war direkt."
+                </p>
+                <p><strong>Marcus K.</strong><br />Selbstständiger Berater</p>
+              </article>
+              <article class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                  "Ich wusste nicht, wie ich anfangen soll. Danach hatte ich
+                  einen klaren Plan und eine Excel-Kalkulation."
+                </p>
+                <p><strong>Lisa H.</strong><br />Restaurantbesitzerin</p>
+              </article>
+            </div>
+
+            <div class="hero-actions">
+              <a class="button" href="#anfrage">Jetzt Businessplan anfragen</a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="section-head">
+              <h2>Der Businessplan ist oft die größte Hürde beim Gründen.</h2>
+              <p class="section-copy">
+                Wir reduzieren den Prozess auf klare Fragen, saubere Struktur
+                und eine professionelle Ausarbeitung, die du für Bank,
+                Förderung oder eigene Planung nutzen kannst.
+              </p>
+            </div>
+
+            <div class="check-list">
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>Kein wochenlanger Aufwand mit unübersichtlichen Vorlagen.</div>
+              </div>
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>Kein klassischer Beratungsprozess für mehrere tausend Euro.</div>
+              </div>
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>Ein Plan, der strukturiert, verständlich und einreichbar ist.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="ablauf">
+          <div class="container">
+            <div class="section-head">
+              <h2>So funktioniert es.</h2>
+              <p class="section-copy">
+                Drei Schritte, keine unnötigen Schleifen. Du sendest die
+                Eckdaten, wir melden uns mit Rückfragen und starten nach
+                Abstimmung.
+              </p>
+            </div>
+
+            <div class="grid-3">
+              <article class="card">
+                <span class="meta">01</span>
+                <h3>Formular ausfüllen</h3>
+                <p>
+                  Du beschreibst dein Vorhaben, die Branche, den Zweck und die
+                  wichtigsten Finanzdaten.
+                </p>
+              </article>
+              <article class="card">
+                <span class="meta">02</span>
+                <h3>Wir prüfen dein Projekt</h3>
+                <p>
+                  Du erhältst innerhalb von 24 Stunden Rückfragen, Zahlungsinfos
+                  und eine realistische Einschätzung.
+                </p>
+              </article>
+              <article class="card">
+                <span class="meta">03</span>
+                <h3>Plan per E-Mail erhalten</h3>
+                <p>
+                  Nach Start bekommst du Businessplan und Excel-Finanzplan
+                  sauber aufbereitet per E-Mail.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container offer">
+            <div>
+              <h2>Was du bekommst.</h2>
+              <p class="lead">
+                Ein vollständiges Paket für deine Gründung, Finanzierung oder
+                Förderung. Klar geschrieben, logisch aufgebaut und optisch
+                professionell.
+              </p>
+            </div>
+
+            <div class="offer-panel">
+              <span class="badge">Fest abgestimmt vor Start</span>
+              <p class="offer-price">ab 499 €</p>
+              <span class="old-price">klassische Beratung oft 3.000 €+</span>
+              <div style="height: 22px"></div>
+              <a class="button" href="#anfrage">Kostenlos anfragen</a>
+            </div>
+          </div>
+
+          <div class="container" style="margin-top: 18px">
+            <div class="check-list">
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>Professioneller Businessplan als PDF.</div>
+              </div>
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>3-Jahres-Finanzplan als Excel-Datei.</div>
+              </div>
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>Executive Summary, Marktanalyse und klare Kalkulation.</div>
+              </div>
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>Geeignet für Bank, Zuschüsse, Förderungen und Planung.</div>
+              </div>
+              <div class="check-item">
+                <span class="check">✓</span>
+                <div>Zwei vollständige Überarbeitungsrunden inklusive.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="examples">
+          <div class="container">
+            <div class="section-head">
+              <h2>So kann dein Businessplan aussehen.</h2>
+              <p class="section-copy">
+                Die folgenden Beispiele zeigen typische Ausgangssituationen.
+                Konkrete Vorschauen können später aus Supabase ergänzt werden.
+              </p>
+            </div>
+
+            <div class="grid-3">
+              <article class="card">
+                <span class="meta">E-Commerce</span>
+                <h3>Online Shop</h3>
+                <p>
+                  Businessplan für einen Shop mit physischen Produkten inklusive
+                  Marktanalyse, Finanzplan und Marketingstrategie.
+                </p>
+              </article>
+              <article class="card">
+                <span class="meta">Beratung & Services</span>
+                <h3>Dienstleistung</h3>
+                <p>
+                  Ideal für Freelancer, Beratungsunternehmen und Anträge auf
+                  Gründungszuschuss.
+                </p>
+              </article>
+              <article class="card">
+                <span class="meta">Restaurant & Café</span>
+                <h3>Gastronomie</h3>
+                <p>
+                  Konzept, Standort, Angebot und Kalkulation für Restaurant,
+                  Café oder kleines Gastro-Projekt.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="section-head">
+              <h2>Häufige Fragen.</h2>
+              <p class="section-copy">
+                Die wichtigsten Punkte vor deiner Anfrage. Alles Weitere klären
+                wir direkt nach dem Absenden.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <details open>
+                <summary>Wie lange dauert die Erstellung?</summary>
+                <p>
+                  Bei kleineren Projekten kann die Erstellung innerhalb von 48
+                  Stunden möglich sein. Nach deiner Anfrage bekommst du eine
+                  realistische Einschätzung.
+                </p>
+              </details>
+              <details>
+                <summary>Für welche Zwecke ist der Businessplan geeignet?</summary>
+                <p>
+                  Für Zuschüsse und Förderungen, Bankkredite,
+                  Gründungszuschuss, KfW-Förderung, Investor-Pitches und deine
+                  eigene Planung.
+                </p>
+              </details>
+              <details>
+                <summary>Was passiert nach dem Absenden des Formulars?</summary>
+                <p>
+                  Tarik meldet sich innerhalb von 24 Stunden mit Rückfragen und
+                  Zahlungsinfos. Deine Daten werden nicht weitergegeben.
+                </p>
+              </details>
+              <details>
+                <summary>Kann ich Änderungen anfordern?</summary>
+                <p>
+                  Ja. Zwei vollständige Überarbeitungsrunden sind inklusive. Je
+                  klarer dein Feedback ist, desto schneller kommen wir zum Ziel.
+                </p>
+              </details>
+              <details>
+                <summary>In welchen Branchen gibt es Erfahrung?</summary>
+                <p>
+                  Einzelhandel, Gastronomie, Dienstleistung, E-Commerce,
+                  Handwerk und weitere Branchen. Grundsätzlich kann für fast
+                  jede Geschäftsidee ein Businessplan erstellt werden.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section id="anfrage" class="form-section">
+          <div class="container form-shell">
+            <div class="form-intro">
+              <span class="eyebrow">Kostenlose Erstprüfung</span>
+              <h2 style="margin-top: 22px">Jetzt Businessplan anfragen.</h2>
+              <p class="lead">
+                Antwort innerhalb von 24 Stunden. Du zahlst erst, wenn Umfang,
+                Preis und Ablauf klar abgestimmt sind.
+              </p>
+            </div>
+
+            <div class="form-card">
+              <form id="lead-form">
+                <div class="field-grid">
+                  <label>
+                    Name *
+                    <input name="name" autocomplete="name" required />
+                  </label>
+                  <label>
+                    E-Mail *
+                    <input name="email" type="email" autocomplete="email" required />
+                  </label>
+                </div>
+
+                <label>
+                  Telefon
+                  <input name="telefon" autocomplete="tel" />
+                </label>
+
+                <label>
+                  Was möchtest du gründen? *
+                  <textarea name="vorhaben" required></textarea>
+                </label>
+
+                <details class="advanced-fields">
+                  <summary>Weitere Angaben optional</summary>
+                  <div class="advanced-fields-body">
+                    <div class="field-grid">
+                      <label>
+                        Branche
+                        <select name="branche">
+                          <option value="">Bitte wählen</option>
+                          <option>Einzelhandel</option>
+                          <option>Gastronomie</option>
+                          <option>Dienstleistung</option>
+                          <option>E-Commerce</option>
+                          <option>Handwerk</option>
+                          <option>IT/Tech</option>
+                          <option>Andere</option>
+                        </select>
+                      </label>
+                      <label>
+                        Zweck
+                        <select name="zweck">
+                          <option value="">Bitte wählen</option>
+                          <option>Bankkredit/Finanzierung</option>
+                          <option>Gründungszuschuss Arbeitsagentur</option>
+                          <option>Investor/Pitch</option>
+                          <option>KfW-Förderung</option>
+                          <option>Eigene Planung</option>
+                          <option>Andere Förderung</option>
+                        </select>
+                      </label>
+                    </div>
+
+                    <div class="field-grid">
+                      <label>
+                        Startkapital
+                        <select name="startkapital">
+                          <option value="">Bitte wählen</option>
+                          <option>Unter 5.000 €</option>
+                          <option>5.000-20.000 €</option>
+                          <option>20.000-50.000 €</option>
+                          <option>Über 50.000 €</option>
+                        </select>
+                      </label>
+                      <label>
+                        Umsatzziel Jahr 1
+                        <select name="umsatzziel">
+                          <option value="">Bitte wählen</option>
+                          <option>Unter 50.000 €</option>
+                          <option>50.000-100.000 €</option>
+                          <option>100.000-250.000 €</option>
+                          <option>Über 250.000 €</option>
+                        </select>
+                      </label>
+                    </div>
+
+                    <label>
+                      Mitarbeiter
+                      <select name="mitarbeiter">
+                        <option value="">Bitte wählen</option>
+                        <option>Nur ich</option>
+                        <option>1-3</option>
+                        <option>4-10</option>
+                        <option>Über 10</option>
+                      </select>
+                    </label>
+                  </div>
+                </details>
+
+                <p class="fineprint">
+                  Mit dem Absenden stimmst du der Kontaktaufnahme zur Bearbeitung
+                  deiner Anfrage zu. Impressum und Datenschutz werden vor dem
+                  Livegang ergänzt.
+                </p>
+
+                <button class="button" type="submit">Kostenlos anfragen</button>
+                <p class="form-status" id="form-status" role="status"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <span>© 2026 Tarik Tosunoglu Unternehmensberatung</span>
+          <div class="footer-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const form = document.querySelector("#lead-form");
+      const statusEl = document.querySelector("#form-status");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        statusEl.textContent = "Anfrage wird gesendet...";
+        submitButton.disabled = true;
+        submitButton.style.opacity = "0.65";
+
+        try {
+          const response = await fetch("/.netlify/functions/businessplan-lead", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            throw new Error("request_failed");
+          }
+
+          window.location.href = "danke.html";
+        } catch (error) {
+          statusEl.textContent =
+            "Die Anfrage konnte gerade nicht gesendet werden. Bitte versuche es später erneut.";
+          submitButton.disabled = false;
+          submitButton.style.opacity = "1";
+        }
+      });
+    </script>
+  </body>
+</html>
