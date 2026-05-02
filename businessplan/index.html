@@ -242,14 +242,32 @@
       .badge {
         display: inline-flex;
         align-items: center;
-        min-height: 30px;
-        padding: 0 10px;
+        justify-content: center;
+        min-height: 32px;
+        padding: 0 12px;
         border: 1px solid #d8e7df;
         border-radius: 999px;
         background: var(--accent-soft);
         color: var(--accent);
         font-size: 12px;
         font-weight: 650;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .contact-badge {
+        cursor: pointer;
+        transition:
+          background 160ms ease,
+          border-color 160ms ease,
+          color 160ms ease;
+      }
+
+      .contact-badge:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
       }
 
       .metric-list {
@@ -443,11 +461,21 @@
         align-items: stretch;
       }
 
+      .hero-offer-strip {
+        padding: 24px 0 72px;
+        border-bottom: 1px solid var(--line);
+      }
+
       .offer-panel {
         border: 1px solid var(--line);
         border-radius: 24px;
         padding: 26px;
         background: var(--soft);
+      }
+
+      .hero-offer-panel {
+        max-width: 380px;
+        margin: 0 auto;
       }
 
       .offer-price {
@@ -458,12 +486,44 @@
         font-weight: 680;
       }
 
+      .tax-note {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
       .old-price {
         display: block;
         margin-top: 12px;
         color: var(--muted);
         text-decoration: line-through;
         text-decoration-thickness: 1px;
+      }
+
+      .price-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .price-card {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: #fff;
+        padding: 26px;
+      }
+
+      .price-card h3 {
+        margin-top: 16px;
+        font-size: 20px;
+        letter-spacing: -0.025em;
+      }
+
+      .price-card p {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 15px;
       }
 
       .examples .card,
@@ -734,6 +794,10 @@
           grid-template-columns: 1fr;
         }
 
+        .price-grid {
+          grid-template-columns: 1fr;
+        }
+
         .timeline {
           grid-template-columns: 1fr;
           gap: 42px;
@@ -928,9 +992,22 @@
                   <p class="mini-label">Direkter Kontakt</p>
                   <p><strong>Tarik Tosunoglu</strong></p>
                 </div>
-                <span class="badge">Antwort in 24h</span>
+                <a class="badge contact-badge" href="#anfrage">Kontakt aufnehmen</a>
               </div>
             </aside>
+          </div>
+        </section>
+
+        <section class="hero-offer-strip">
+          <div class="container">
+            <div class="offer-panel hero-offer-panel">
+              <span class="badge">Fest abgestimmt vor Start</span>
+              <p class="offer-price">ab 499 €</p>
+              <span class="tax-note">zzgl. Mehrwertsteuer</span>
+              <span class="old-price">klassische Beratung oft 3.000 €+</span>
+              <div style="height: 22px"></div>
+              <a class="button" href="#anfrage">Kostenlos anfragen</a>
+            </div>
           </div>
         </section>
 
@@ -1065,6 +1142,43 @@
         </section>
 
         <section>
+          <div class="container">
+            <div class="section-head">
+              <h2>Transparent nach Bausteinen kalkuliert.</h2>
+              <p class="section-copy">
+                Du kannst Finanzplan und schriftlichen Businessplan getrennt
+                beauftragen oder als vollständiges Paket kombinieren.
+              </p>
+            </div>
+
+            <div class="price-grid">
+              <article class="price-card">
+                <span class="badge">Zahlenteil</span>
+                <p class="offer-price">499 €</p>
+                <span class="tax-note">zzgl. Mehrwertsteuer</span>
+                <h3>Finanzplan</h3>
+                <p>
+                  Excel-Finanzplan mit Umsatz, Kosten, Liquidität und
+                  grundlegender Planung für Bank, Förderung oder eigene
+                  Kalkulation.
+                </p>
+              </article>
+              <article class="price-card">
+                <span class="badge">Schriftlicher Teil</span>
+                <p class="offer-price">499 €</p>
+                <span class="tax-note">zzgl. Mehrwertsteuer</span>
+                <h3>Businessplan-Text</h3>
+                <p>
+                  Ausformulierter Businessplan mit Konzept, Zielgruppe,
+                  Marktumfeld, Strategie und sauberer Struktur für deine
+                  Unterlagen.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section>
           <div class="container offer">
             <div>
               <h2>Was du bekommst.</h2>
@@ -1078,6 +1192,7 @@
             <div class="offer-panel">
               <span class="badge">Fest abgestimmt vor Start</span>
               <p class="offer-price">ab 499 €</p>
+              <span class="tax-note">zzgl. Mehrwertsteuer</span>
               <span class="old-price">klassische Beratung oft 3.000 €+</span>
               <div style="height: 22px"></div>
               <a class="button" href="#anfrage">Kostenlos anfragen</a>
