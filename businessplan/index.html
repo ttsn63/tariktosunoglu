@@ -359,6 +359,83 @@
         margin-top: 2px;
       }
 
+      .timeline {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        padding-top: 34px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 8%;
+        right: 8%;
+        height: 1px;
+        background: var(--line);
+        z-index: 0;
+      }
+
+      .timeline::after {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 8%;
+        width: 84%;
+        height: 1px;
+        background: var(--accent);
+        z-index: 0;
+      }
+
+      .timeline-step {
+        position: relative;
+        z-index: 1;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fff;
+        padding: 24px;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        width: 28px;
+        height: 28px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        background: #fff;
+        color: var(--accent);
+        z-index: 2;
+        transform: translateX(-50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .timeline-time {
+        display: inline-flex;
+        margin-bottom: 14px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .timeline-step h3 {
+        font-size: 18px;
+        letter-spacing: -0.025em;
+      }
+
+      .timeline-step p {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
       .offer {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
@@ -657,6 +734,31 @@
           grid-template-columns: 1fr;
         }
 
+        .timeline {
+          grid-template-columns: 1fr;
+          gap: 42px;
+          padding-top: 34px;
+        }
+
+        .timeline::before,
+        .timeline::after {
+          top: 13px;
+          bottom: 13px;
+          left: 50%;
+          right: auto;
+          width: 1px;
+          height: auto;
+        }
+
+        .timeline-step {
+          margin-left: 0;
+        }
+
+        .timeline-dot {
+          top: -35px;
+          left: 50%;
+        }
+
         .hero {
           padding-top: 64px;
         }
@@ -886,19 +988,38 @@
               </p>
             </div>
 
-            <div class="check-list">
-              <div class="check-item">
-                <span class="check">✓</span>
-                <div>Kein wochenlanger Aufwand mit unübersichtlichen Vorlagen.</div>
-              </div>
-              <div class="check-item">
-                <span class="check">✓</span>
-                <div>Kein klassischer Beratungsprozess für mehrere tausend Euro.</div>
-              </div>
-              <div class="check-item">
-                <span class="check">✓</span>
-                <div>Ein Plan, der strukturiert, verständlich und einreichbar ist.</div>
-              </div>
+            <div class="timeline" aria-label="Ablauf in drei bis vier Tagen">
+              <article class="timeline-step">
+                <span class="timeline-dot">1</span>
+                <span class="timeline-time">Tag 1</span>
+                <h3>Anfrage</h3>
+                <p>
+                  Du sendest die wichtigsten Eckdaten. Wir prüfen dein Vorhaben
+                  und klären offene Punkte kurz und direkt.
+                </p>
+              </article>
+              <article class="timeline-step">
+                <span class="timeline-dot">2</span>
+                <span class="timeline-time">Tag 2-3</span>
+                <h3>Bearbeitung</h3>
+                <p>
+                  Businessplan, Struktur und Finanzlogik werden sauber
+                  ausgearbeitet und für deinen Zweck vorbereitet.
+                </p>
+              </article>
+              <article class="timeline-step">
+                <span class="timeline-dot">3</span>
+                <span class="timeline-time">Tag 3-4</span>
+                <h3>Abgabe</h3>
+                <p>
+                  Du erhältst den fertigen Businessplan und den Finanzplan per
+                  E-Mail, bereit für Bank, Förderung oder eigene Planung.
+                </p>
+              </article>
+            </div>
+
+            <div class="hero-actions">
+              <a class="button" href="#anfrage">Jetzt Businessplan anfragen</a>
             </div>
           </div>
         </section>
