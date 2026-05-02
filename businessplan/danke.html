@@ -94,5 +94,32 @@
       </p>
       <a href="/">Zurück zur Startseite</a>
     </main>
+    <script>
+      const googleAdsId = "AW-18135010125";
+      const conversionId = "AW-18135010125/Z5uACO-6tqYcEM2WucdD";
+      const consentKey = "businessplanCookieConsent";
+
+      if (localStorage.getItem(consentKey) === "marketing") {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() {
+          window.dataLayer.push(arguments);
+        };
+
+        window.gtag("js", new Date());
+        window.gtag("config", googleAdsId);
+
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`;
+        script.addEventListener("load", () => {
+          window.gtag("event", "conversion", {
+            send_to: conversionId,
+            value: 1.0,
+            currency: "EUR",
+          });
+        });
+        document.head.appendChild(script);
+      }
+    </script>
   </body>
 </html>
