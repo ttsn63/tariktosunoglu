@@ -1,3 +1,18 @@
 [build]
   publish = "."
   functions = "netlify/functions"
+
+[[redirects]]
+  from = "/"
+  to = "/businessplan/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/assets/*"
+  to = "/businessplan/assets/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/danke.html"
+  to = "/businessplan/danke.html"
+  status = 200
